@@ -19,6 +19,7 @@ func (Product) TableName() string {
 
 func main() {
 	dsn := "root:123456@tcp(101.43.27.206:3306)/gorm?charset=utf8mb4&&parseTime=True&loc=Local"
+	//dsn := "root:123456@tcp(127.0.0.1:3306)/gorm?charset=utf8mb4&&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	// MySQl 驱动程序提供了 一些高级配置 可以在初始化过程中使用，例如：
 	//db, err := gorm.Open(mysql.New(mysql.Config{

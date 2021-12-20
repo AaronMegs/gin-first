@@ -13,7 +13,7 @@ import (
 
 // Login Binding from JSON / XML / FORM
 type Login struct {
-	User     string `form:"user" json:"user" xml:"user" binding:"required"` // binding:"-" 获取不设置 binding:"" tag 时表示该参数为非必填项
+	User     string `form:"user" json:"user" xml:"user" binding:"required"` // binding:"-" 或者不设置 binding:"" tag 时表示该参数为非必填项
 	Password string `form:"password" json:"password" xml:"password" binding:"required"`
 	//Password string `form:"password" json:"password" xml:"password"`
 	//Password string `form:"password" json:"password" xml:"password" binding:"-"`

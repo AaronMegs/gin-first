@@ -39,7 +39,6 @@ func main() {
 	router := gin.Default()
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
 		v.RegisterValidation("bookabledate", bookableDate)
-
 	}
 
 	router.GET("/bookable", getBookable)
